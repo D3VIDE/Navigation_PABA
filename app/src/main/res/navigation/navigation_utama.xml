@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation_utama"
-    app:startDestination="@id/homeFragment">
+    app:startDestination="@id/homeFragment"
+    android:label="HOME">
 
     <fragment
         android:id="@+id/homeFragment"
@@ -14,7 +15,13 @@
         android:id="@+id/profileFragment"
         android:name="devide.apps.navigation.ProfileFragment"
         android:label="profile"
-        tools:layout="@layout/fragment_profile" />
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profileFragment_to_detailProfileFragment"
+            app:destination="@id/detailProfileFragment"
+        />
+    </fragment>
+
     <fragment
         android:id="@+id/detailProfileFragment"
         android:name="devide.apps.navigation.DetailProfileFragment"
